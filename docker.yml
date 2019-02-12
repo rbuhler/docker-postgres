@@ -1,0 +1,13 @@
+version: '3.1'
+services:
+
+postgres:
+  container_name: database
+  hostname: database
+  ports:
+  - "5432:5432"
+  build: scripts/postgres/
+  environment:
+  - POSTGRES_USER=pguser
+  - POSTGRES_PASSWORD=pguser
+  - POSTGRES_DB=postgres
