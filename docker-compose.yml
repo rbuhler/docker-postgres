@@ -7,13 +7,7 @@ services:
     ports:
       - "5432:5432"
     build: scripts/postgres/
-    volumes:
-      - data:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=pguser
       - POSTGRES_PASSWORD=pguser
       - POSTGRES_DB=postgres
-    user: "1000:50"
-volumes:
-  data:
-    driver: local
