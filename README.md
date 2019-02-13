@@ -3,8 +3,7 @@
 ## MOST UPDATED
 
 ````text
- docker run --name pg-docker -e POSTGRES_PASSWORD=123456 -d -v datadir:/var/lib/postgresql/data postgres
- docker-compose -f docker-compose.yml up
+ docker-compose up --build
 ````
 
 ## COMMANDS
@@ -20,6 +19,9 @@ $ docker system prune
 ## OTHERS
 
 ````
+ docker run --name pg-docker -e POSTGRES_PASSWORD=123456 -d -v datadir:/var/lib/postgresql/data postgres
+ docker-compose -f docker-compose.yml up
+
  docker run --name 11.1 -e POSTGRES_PASSWORD=123456 -d postgres
  docker run --name 11.1 -e POSTGRES_PASSWORD=123456 -d -v datadir:/var/lib/postgresql/data postgres
 
